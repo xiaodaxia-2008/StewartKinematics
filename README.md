@@ -9,8 +9,7 @@ Kinematics implementation derived from [LinuxCNC's `genhexkins`](https://github.
 ## Installation
 Requires [Eigen 3](https://gitlab.com/libeigen/eigen).
 
-On Ubuntu this can be installed with `sudo apt-get install libeigen3-dev`.
-
 ## Usage
 
+See `test/test_basic.cpp` for examples.
 See `test/test_kinematics.cpp` for examples.

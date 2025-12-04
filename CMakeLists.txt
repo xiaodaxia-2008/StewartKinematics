@@ -7,10 +7,13 @@ project(
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD 23)
 endif()
 
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+find_package(spdlog CONFIG REQUIRED)
+
+link_libraries(spdlog::spdlog)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)

@@ -10,6 +10,11 @@ target_include_directories(test_kinematics PUBLIC ../include)
 # Should be linked to the main library, as well as the Catch2 testing library
 target_link_libraries(test_kinematics PRIVATE hexapod_kinematics Catch2::Catch2WithMain)
 
+add_executable(test_basic test_basic)
+target_include_directories(test_basic PUBLIC ../include)
+# Should be linked to the main library, as well as the Catch2 testing library
+target_link_libraries(test_basic PRIVATE hexapod_kinematics)
+
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 include(CTest)
 include(Catch)
